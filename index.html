@@ -27,35 +27,6 @@
                 liff.getProfile().then(profile => {
                     userId = profile.userId; // LINEのユーザーIDを取得
                     alert("あなたのユーザーIDは: " + userId);
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>同棲精算アプリ</title>
-    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-</head>
-<body>
-    <h2>💸 精算入力</h2>
-    <form id="paymentForm">
-        <input type="number" id="amount" placeholder="金額" required><br><br>
-        <input type="text" id="desc" placeholder="内容（スーパーなど）" required><br><br>
-        <button type="submit">登録する</button>
-    </form>
-
-    <script>
-        const LIFF_ID = '2010609871-SfsWmyk5';
-        const GAS_URL = 'https://script.google.com/u/0/home/projects/1Po-Ag48m47VVm7ucpdnHXAqA4X1yDEhK_hoPnz574wNr5pCkS_nEpTPf/edit';
-        let userId = '';
-
-        // LIFFの初期化
-        liff.init({ liffId: LIFF_ID }).then(() => {
-            if (!liff.isLoggedIn()) {
-                liff.login(); // ログインしていなければログイン画面へ
-            } else {
-                liff.getProfile().then(profile => {
-                    userId = profile.userId; // LINEのユーザーIDを取得
-                    alert("あなたのユーザーIDは: " + userId);
                 });
             }
         });
